@@ -18,7 +18,7 @@ export const postMeasureValidation = () => {
       .withMessage("Tipo de medição deve ser uma string")
       .notEmpty()
       .withMessage("Tipo de medição é obrigatório")
-      .isIn(["WATER", "GAS"])
+      .isIn(["WATER", "GAS", "water", "gas"])
       .withMessage('Tipo de medição deve ser WATER ou GAS'),
   ];
 };

@@ -11,9 +11,9 @@ datasource db {
 
 model Measure {
   measure_uuid String @id @default(uuid())
-  image String
+  image_url String
   customer_code String 
-  measure_value String?
+  measure_value Int?
   measure_datetime DateTime @db.Date
   measure_type String
   has_confirmed Boolean @default(false)

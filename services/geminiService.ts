@@ -37,7 +37,7 @@ export const uploadImage = async (filePath: string) => {
 export const extractMeasureImage = async (file: FileMetadataResponse) => {
   try {
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: "gemini-1.5-flash",
     });
 
     const result = await model.generateContent([
@@ -48,7 +48,7 @@ export const extractMeasureImage = async (file: FileMetadataResponse) => {
         },
       },
       {
-        text: "Extract the measurement value from this image made up of between 6 and 7 numbers which are separated by dashes.",
+        text: "Extract the measurement value from this image made up of between 6 and 8 numbers which are separated by dashes.",
       },
     ]);
 
