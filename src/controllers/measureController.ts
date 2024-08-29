@@ -27,7 +27,7 @@ export const registerMeasure = async (req: Request, res: Response) => {
     const image = (req.file as Express.Multer.File).filename;
 
     const measure = await verifyMeasureExistInMonth(
-      data.measure_type,
+      data.measure_type.toUpperCase(),
       data.customer_code,
       data.measure_datetime
     );
